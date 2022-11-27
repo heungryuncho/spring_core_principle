@@ -15,6 +15,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration // 설정 정보, 구성 정보
 public class AppConfig {
 
+    //@Bean memberService -> new MemoryMemberRepository()
+    //@Bean orderService -> new MemoryMemberRepository()
+
     @Bean // -> 스프링 컨테이너에 등록
     public MemberService memberService(){
         return new MemberServiceImpl(memberRepository());
